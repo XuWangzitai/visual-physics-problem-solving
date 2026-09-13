@@ -1,4 +1,15 @@
 interface:
-  display_name: "Visual Physics Problem Solving"
-  short_description: "Model, predict, visualize, and solve physics problems"
-  default_prompt: "Use $visual-physics-problem-solving to help me model and solve this physics problem in English, starting with my prediction."
+  display_name: Visual Physics Problem Solving
+  short_description: Deep physics tutoring with one focused visual when useful
+  default_prompt: Use $visual-physics-problem-solving to teach me this physics problem
+    in English, ask for one meaningful prediction first, and use the lightest visual
+    that materially improves understanding.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

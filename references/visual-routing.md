@@ -2,6 +2,16 @@
 
 Read when a representation could materially improve physical reasoning, or before constructing one. Choose the least complex representation that exposes the relevant relationship.
 
+## Apply the visual budget first
+
+- Keep the first Learning Mode turn text-only unless the learner cannot formulate a prediction without a spatial, field, or graphical definition.
+- Use at most one lightweight static visual for an ordinary problem. Reuse or update it instead of generating separate setup, explanation, and answer visuals.
+- Prefer a static diagram or plot over an interactive artifact when both teach the same relationship.
+- Build an interactive only when manipulating a parameter or stepping through time is itself necessary to test the learner's model, or when the user explicitly requests a manipulable sandbox.
+- Do not trade away modeling, derivation, validation, feedback, or transfer questions to meet the visual budget.
+
+Example: ideal one-dimensional free fall from a stated height needs no visual for the calculation. If the learner explicitly asks for an image, obtain the prediction in text, then use one compact height schematic, velocity graph, or energy view—not a setup image followed by a second answer image.
+
 | Reasoning need | Useful representation |
 | --- | --- |
 | Free-body forces, geometry, rays, coordinates, system boundaries, circuit structure | Labeled static diagram with physically meaningful positions and directions |
@@ -25,7 +35,7 @@ Derive a compact internal specification from the learner's model and the problem
 
 Expose one to three meaningful parameter controls when possible. Include units and current values, relevant live readouts, a baseline and reset, and play/pause for time evolution. Reset must restore a reproducible baseline. When parameters change, either reset the experiment or explicitly represent an intervention and account for any injected energy or changed conditions. Playback speed must not change the physical result.
 
-In Learning Mode, obtain and acknowledge a meaningful prediction, direction, model, or approach in chat before emitting an interactive that would settle the current question. A paused visual with an available play or reveal control does not enforce this gate. Before that prediction, a necessary setup visual must omit or conceal decisive traces, results, readouts, and controls so no available interaction reveals the outcome. After the prediction, a paused baseline is appropriate. Deadline Mode has no prediction gate; Check-my-work starts with diagnosis of the submitted work. Use only essential plots and readouts, without decorative controls, mandatory worksheets, export panels, or an application shell.
+In Learning Mode, obtain and acknowledge a meaningful prediction, direction, model, or approach in chat before emitting a visual that would settle the current question. A paused visual with an available play or reveal control does not enforce this gate. Before that prediction, use text by default; a genuinely necessary setup visual must omit decisive traces, results, readouts, and controls, and must be reused later when practical. After the prediction, a paused baseline is appropriate. Deadline Mode has no prediction gate; Check-my-work starts with diagnosis of the submitted work. Use only essential plots and readouts, without decorative controls, mandatory worksheets, export panels, or an application shell.
 
 ## Compute dynamics independently of rendering
 

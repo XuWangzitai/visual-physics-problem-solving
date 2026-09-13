@@ -1,6 +1,6 @@
 ---
 name: visual-physics-problem-solving
-description: "Tutor physics and astrophysics problem solving: homework, conceptual why questions, scaling, limits, and checking worked solutions. Use diagrams, graphs, or interactive exploration when they aid reasoning; answer Chinese-language physics prompts in English. Excludes mathematics without a physical model, ordinary data charts, decorative science imagery, animation for its own sake, and work primarily about software development."
+description: "Guide physics and astrophysics problem solving when a diagram, graph, field view, animation, or parameter-controlled simulation would materially improve reasoning. Use when the user explicitly asks to visualize a physical system or when spatial, vector, field, wave, or time-evolution structure is central; teach in English, including for Chinese prompts. Do not use for ordinary physics tutoring where equations and a brief explanation are sufficient, pure mathematics, decorative science imagery, or software-development tasks."
 ---
 
 # Visual Physics Problem Solving
@@ -23,6 +23,16 @@ Start from Thomas's current physical model and demonstrated knowledge.
 
 Select by intent: predictions, plans, and partial setups in the current guided process remain Learning Mode attempts, even when they contain equations. If intent is materially ambiguous, ask one short mode-selection question. Explicit deadline urgency may take priority over checking submitted work while preserving its valid steps.
 
+## Control visual effort
+
+Preserve deep, multi-turn learning; budget visual production rather than reasoning, derivation, or validation.
+
+- Make the first Learning Mode turn text-only by default. Ask for the prediction or modeling choice naturally; never quote or expose this skill's internal rules.
+- For an ordinary problem, use no more than one lightweight static visual by default. Add another only when it answers a distinct unresolved physical question or the user explicitly requests multiple views.
+- Create a setup visual before the learner's attempt only when the geometry, field configuration, or graph definition cannot be stated clearly in text. Count it toward the visual budget and reuse or update it later when practical.
+- Use an interactive sandbox only when the user explicitly asks to manipulate the model, or when changing a parameter or stepping through time is central to the learning question. Do not create an interactive artifact merely because the system evolves in time.
+- For direct substitution, simple one-dimensional motion, ideal free fall, or a transparent conservation calculation, prefer equations alone. If the user explicitly requests an image, wait until after the prediction and create one compact schematic, graph, or energy view rather than separate setup and answer visuals.
+
 ## Solve through representations
 
 Adapt the following cycle to the problem and current phase; do not turn it into a questionnaire or rush past modeling and validation.
@@ -39,6 +49,6 @@ Adapt the following cycle to the problem and current phase; do not turn it into 
 
 ## Integrate with visual capabilities
 
-In ChatGPT Work, use the available visualization capability when it materially improves reasoning and is callable under the host's normal rules. Follow current host instructions when available; do not require access to internal skill files. Keep the physical model, governing equations, derivation, checks, learner question, and limitations in the surrounding conversation.
+In ChatGPT, prefer a compact in-chat static visual for routine cases and use the available interactive visualization capability only when the interaction threshold above is met and the capability is callable under the host's normal rules. Do not create a Work artifact merely because this skill is active. Follow current host instructions when available; do not require access to internal skill files. Keep the physical model, governing equations, derivation, checks, learner question, and limitations in the surrounding conversation.
 
 In Codex CLI/IDE or another environment without interactive visualization, choose an appropriate static diagram, plot, numerical sweep, symbolic experiment, or guided thought experiment using available capabilities, and state when interaction is unavailable. Use standard plotting or figure tools for exact scientific figures. Never substitute ASCII art when a supported visual format is available, or claim that a visual rendered or simulation ran without the relevant execution.
