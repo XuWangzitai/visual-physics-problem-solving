@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual Physics Problem Solving"
+  short_description: "Model, predict, visualize, and solve physics problems"
+  default_prompt: "Use $visual-physics-problem-solving to help me model and solve this physics problem in English, starting with my prediction."
