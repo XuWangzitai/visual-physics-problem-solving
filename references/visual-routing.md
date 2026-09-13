@@ -7,6 +7,7 @@ Read when a representation could materially improve physical reasoning, or befor
 | Free-body forces, geometry, rays, coordinates, system boundaries, circuit structure | Labeled static diagram with physically meaningful positions and directions |
 | Proportionality, energy landscapes, resonance, functions, scaling, competing models | Graph or a small set of linked plots |
 | Forces, velocity, acceleration, electric or magnetic fields, flux, gradients | Vector or field representation; distinguish vector magnitude from display scaling |
+| Thermodynamic paths, AC phase, optics, energy levels, spacetime, standing-wave shape | Prefer a static P-V/T-S, phasor, ray, energy-level, spacetime, or node/envelope diagram; add time evolution only when it answers the question |
 | Motion, trajectories, oscillations, waves, orbits, coupling, time evolution, parameter sensitivity | Animation or interactive sandbox when changing or stepping an input improves understanding |
 | Direct substitution or a relationship already clear from a short equation | No visual; give a brief reason only if useful |
 
@@ -24,18 +25,20 @@ Derive a compact internal specification from the learner's model and the problem
 
 Expose one to three meaningful parameter controls when possible. Include units and current values, relevant live readouts, a baseline and reset, and play/pause for time evolution. Reset must restore a reproducible baseline. When parameters change, either reset the experiment or explicitly represent an intervention and account for any injected energy or changed conditions. Playback speed must not change the physical result.
 
-For prediction-first learning, initialize paused, at baseline, or with outputs hidden. Hide information that would settle the question until a meaningful prediction exists. Use only essential plots and readouts; do not add decorative controls, mandatory worksheets, export panels, or a general application shell.
+In Learning Mode, obtain and acknowledge a meaningful prediction, direction, model, or approach in chat before emitting an interactive that would settle the current question. A paused visual with an available play or reveal control does not enforce this gate. Before that prediction, a necessary setup visual must omit or conceal decisive traces, results, readouts, and controls so no available interaction reveals the outcome. After the prediction, a paused baseline is appropriate. Deadline Mode has no prediction gate; Check-my-work starts with diagnosis of the submitted work. Use only essential plots and readouts, without decorative controls, mandatory worksheets, export panels, or an application shell.
 
 ## Compute dynamics independently of rendering
 
-Use an analytic solution when it accurately represents the model; a sinusoid is appropriate for ideal simple harmonic motion, not a substitute for arbitrary dynamics. For numerical dynamics, choose a solver suited to the equations and timescale. Decouple integration from display refresh: use a fixed simulation timestep with an accumulator, or a controlled solver independent of frames. Bound catch-up work after a pause and keep displayed simulation time honest.
+Compute every displayed physical state from a valid closed-form solution or an integrator of the stated governing equations with the displayed parameter values. Do not substitute keyframes, easing, hand-tuned trajectories, or decorative motion for those equations. A sinusoid is valid for ideal simple harmonic motion, not arbitrary dynamics.
 
-Select timestep and, where applicable, spatial resolution from accuracy and stability needs. Do not prescribe one timestep or integrator for all systems. Stop and explain nonfinite or invalid states instead of silently clipping them into plausible motion. Handle events such as ground impact explicitly. Validate using [physics-validation.md](physics-validation.md) before revealing computed behavior.
+For numerical oscillatory or orbital motion, do not use explicit Euler. Choose a method and timestep that resolve the fastest relevant timescale, including fast transients as well as periods; account for stiffness and spatial stability restrictions where applicable. Refuse or constrain parameters that violate stability instead of clipping results. No single integrator or timestep fits every system.
 
-Follow the installed `visualize` contract for inline interaction. A standalone offline model is useful when explicitly requested as an export; it is not the default output of this skill. Keep equations and model limitations in the conversation as required by the rendering capability.
+Decouple integration from display refresh with fixed simulation steps or a controlled solver independent of frames. Bound catch-up work after pauses and keep displayed time honest. Stop and explain nonfinite states, handle impact events explicitly, and disclose numerical limitations. Include a useful benchmark, residual, invariant drift, or error readout when practical; its presence alone is not evidence that a test ran.
+
+A standalone offline model is useful when explicitly requested as an export; it is not this skill's default output.
 
 For every visual, state what it **preserves**, **simplifies**, and **cannot establish**. For example, a drag trajectory preserves the chosen force law and initial conditions, simplifies the body to a point mass in still air, and cannot establish a real object's drag coefficient. Use equal spatial scales when angles or shapes carry physical meaning, or visibly disclose distortion. Label normalized, clipped, or rescaled vectors and plots.
 
 ## Design provenance
 
-General design ideas were inspected in [moving-parts by Changyong Mun](https://github.com/cmun2/moving-parts/tree/e13171e220c0e032712aeac0a7613247ebe00e93) (MIT) and [science-sim-author by dimgouso](https://github.com/dimgouso/science-sim-author/tree/6a32d675acb21c1008a1def87e1eba091dda527c) (MIT): independent simulation time, theoretical comparisons, diagnostic quantities, compact model specifications, and meaningful parameter experiments. This skill contains original instructions; no source code, template, schema, or copied prose from those projects is included. Their standalone file requirements and runtime conventions are not adopted. If future changes incorporate substantial source material, preserve its applicable copyright and license notices.
+General simulation-design ideas were informed by [moving-parts by Changyong Mun](https://github.com/cmun2/moving-parts/tree/e13171e220c0e032712aeac0a7613247ebe00e93) and [science-sim-author by dimgouso](https://github.com/dimgouso/science-sim-author/tree/6a32d675acb21c1008a1def87e1eba091dda527c), both MIT-licensed; no code, templates, schemas, or prose were copied.

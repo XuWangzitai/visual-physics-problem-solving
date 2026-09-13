@@ -6,7 +6,7 @@ Read for Learning Mode, graduated hints, or Check-my-work feedback. Use the mode
 
 Briefly restate the target and invite one decision that exposes understanding: which objects belong in the system, the direction of acceleration, what happens when a parameter doubles, or which principle might apply. Do not bundle every modeling question into the first turn. If Thomas has already provided a prediction or approach, use it rather than asking him to repeat it.
 
-When there is no attempt, stop at that invitation and any neutral setup needed to answer it. Do not append the full derivation, reveal the answer in a graph, or run an animation that resolves the prediction. A paused scene must also hide decisive traces, result readouts, and solution labels when they would give away the answer. A request to "show the answer" without an attempt or deadline still follows the default learning contract.
+In Learning Mode with no attempt, stop at that invitation and any neutral setup needed to answer it. Do not append the full derivation or reveal the answer through a graph or interactive control; apply the pre-prediction visual gate in [visual-routing.md](visual-routing.md). A request to "show the answer" without an attempt or deadline still follows the default learning contract.
 
 Treat "I do not know where to start" as a need for an accessible first choice, not a reason to withhold all help. Ask for a directional or system choice and explain enough vocabulary to make it possible. Accept a sincere incorrect attempt; do not require correctness before helping.
 
@@ -22,7 +22,7 @@ Move up this ladder only as needed, responding to the observed obstacle rather t
 6. Work one missing step and return a nearby step to Thomas.
 7. After a meaningful attempt, explain the complete derivation when needed, then ask for interpretation or transfer.
 
-Keep the current cognitive phase clear: constructing a model, translating it into an equation, solving it, or validating it. Do not answer later phases while Thomas is still forming the governing equation unless Deadline Mode applies.
+Keep the current cognitive phase clear: constructing a model, translating it into an equation, solving it, or validating it. Once the phase-level attempt is present, finish routine manipulations and evaluation together; reserve another learner decision for a physical reasoning obstacle. A simple problem should not acquire a question for each calculation.
 
 ## Diagnose before correction
 
